@@ -23,6 +23,8 @@
 	Use asserts.
 
 	Avoid using public member variables. Prefer to use Getters/Setters.
+
+	Do not use "this." to access member variables (Ex. this.mMemberVariable)
 */
 
 public class ThisIsAClass { // Classes use UpperCamelCase
