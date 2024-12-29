@@ -26,4 +26,8 @@ public class Conventions { // classes use UpperCamelCase
 		INDIANA_ROBOTICS_INVITATIONAL,
 		CHEZY_CHAMPS
 	}
+
+	public String getTeamMissionStatement() {
+		return "Inspire through excellence, engage through interesting fun stuff";
+	}
 }
