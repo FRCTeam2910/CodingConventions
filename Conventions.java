@@ -1,57 +1,29 @@
 //
-// FRC Team 2910 coding conventions for the Java(tm) programming language
+// FRC Team 2910 coding conventions for the Java programming language
 //
 
-/*
-	First, some basic terminology:
-		- A class-level variable is a static variable.
-		- A field is a non-static, member variable of a class or enum.
-		- A constant is a final class-level variable. 
+public class Conventions { // classes use UpperCamelCase
 
-	Always use curly braces even for single line statements.
-	Curly braces start on the same line.
+	public static final double THIS_IS_A_CONSTANT = 3.14; // constants use SCREAMING_SNAKE_CASE and are always public static final
 
-	Tab size is 4.
+	private double thisIsAField = 2.71828; // all fields are lowerCamelCase
 
-	Function names should be descriptive
-		- Name a function after the action it performs.
-		- Getters/Setters should start with "get" and "set"
-		- Functions that return a bool should be phrased as a question.
-			 - Ex. isReady(), doesThingExist(), hasThing()
+	// when reading variables, use "get" and "set" as prefixes
 
-	Use comments and newlines to explain and organize code.
-	Use asserts.
-
-	Avoid using public member variables. Prefer to use Getters/Setters.
-
-	Do not use "this." to access member variables (Ex. this.mMemberVariable)
-*/
-
-public class ThisIsAClass { // Classes use UpperCamelCase
-
-	public static final double THIS_IS_A_CONSTANT = 3.14; // Constants use UPPERCASE_WITH_UNDERSCORES
-
-	private double mMemberVariable = 2.71828; // All member variables are prefixed with 'm' followed by UpperCamelCase
-
-	public int getNumber() { // method names are lowerCamelCase
-		int newVariable;		// Declare one variable per line
-		int anotherVariable; 	// Declare one variable per line
-
-		// Always use curly braces even for single-line statements
-		if (foo.memberFunction()) { // Curly braces start on the same line
-			return 0;
-		}
-		else { // Start related control blocks on a new line
-			return 5;
-		}
+	public int getJackInTheBotTeamNumber() { // method names are lowerCamelCase, and should describe exactly what the method does
+		return 2910;
 	}
-}
 
-public enum ThisIsAnEnum { // Enums use UpperCamelCase
-	ENUM_VALUE, // Enum values use UPPERCASE_WITH_UNDERSCORES
-	ANOTHER_VALUE
-}
+	public void setExampleFieldVariable(double thisIsAField) { // method names are lowerCamelCase, and should describe exactly what the method does
+		this.thisIsAField = thisIsAField;
+	}
 
-public interface IThisIsAnInterface { // Interfaces are prefixed with a 'I' and use UpperCamelCase
-	void doAThing();
+	public enum EVENT { // enums use SCREAMING_SNAKE_CASE
+		SAMMAMISH,
+		AUBURN,
+		DISTRICT_CHAMPS,
+		FIRST_CMP,
+		INDIANA_ROBOTICS_INVITATIONAL,
+		CHEZY_CHAMPS
+	}
 }
